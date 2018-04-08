@@ -1,6 +1,6 @@
-.wrapper {
+.playzone {
   padding-top: 50px;
-  background: #ECEFF1;
+  background: #0d192c;
   height: 100%;
   display: flex;
   flex-flow: row wrap;
@@ -8,4 +8,5 @@
   justify-content: space-around;
   align-content: flex-start;
   overflow: auto;
+  color: #268dd0;
 }

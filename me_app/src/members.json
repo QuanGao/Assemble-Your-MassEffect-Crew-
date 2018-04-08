@@ -1,60 +1,60 @@
 [{
-        "key": 1,
+        "id": 1,
         "name": "Grunt",
         "image": "./images/Grunt.png"
     },
     {
-        "key": 2,
+        "id": 2,
         "name": "Garrus",
         "image": "./images/Garrus.jpg"
     },
     {
-        "key": 3,
+        "id": 3,
         "name": "Jack",
         "image": "./images/Jack.png"
     },
     {
-        "key": 4,
+        "id": 4,
         "name": "Joker",
         "image": "./images/Joker.png"
     },
     {
-        "key": 5,
+        "id": 5,
         "name": "Miranda",
         "image": "./images/Miranda.png"
     },
     {
-        "key": 6,
+        "id": 6,
         "name": "Mordin",
         "image": "./images/Mordin.png"
     },
     {
-        "key": 7,
+        "id": 7,
         "name": "Tali",
         "image": "./images/Tali.png"
     },
     {
-        "key": 8,
+        "id": 8,
         "name": "Thane",
         "image": "./images/Thane.png"
     },
     {
-        "key": 9,
+        "id": 9,
         "name": "Samara",
         "image": "./images/Samara.png"
     },
     {
-        "key": 10,
+        "id": 10,
         "name": "Illusive_man",
         "image": "./images/Illusive_man.jpg"
     },
     {
-        "key": 11,
+        "id": 11,
         "name": "EDI",
         "image": "./images/EDI.png"
     },
     {
-        "key": 12,
+        "id": 12,
         "name": "Wrex",
         "image": "./images/Wrex.png"
     }

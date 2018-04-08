@@ -1,0 +1,18 @@
+.scoreboard {
+    background-color: #2193d7;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.3em;
+};
+
+.scoreboard ul {
+    list-style-type: none;
+    display: block;
+    width: 100%;
+
+}
+.scoreboard li {
+    display: inline-block;
+    color: white;
+    text-align: center;
+}
+

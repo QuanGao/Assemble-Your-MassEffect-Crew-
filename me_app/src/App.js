@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-
-import Wrapper from "./components/Wrapper";
+import Wrapper from "./components/Wrapper"
+import Playzone from "./components/Playzone";
 import ClickItem from "./components/ClickItem";
-// import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar";
 // import Header from "./components/Header";
 // import Footer from "./components/Footer";
 import members from "./members.json";
@@ -36,9 +36,10 @@ class App extends Component {
     render() {
         return (
             <Wrapper>
-            
-                {this.state.members.map(member=>(<ClickItem guess={this.guess} image={member.image} id={member.id} />))}                
-
+                <Navbar />
+                <Playzone>            
+                    {this.state.members.map(member=>(<ClickItem guess={this.guess} image={member.image} id={member.id} />))}                
+                </Playzone>
             </Wrapper>
         )
     }
