@@ -6,13 +6,13 @@ const listStyle = {
     padding: "10px"
 }
 
-const Navbar = () => {
+const Navbar = (props) => {
     return (
         <div className="container-fluid scoreboard">
             <ul style={listStyle} className="row">
                 <li className="restart col-md-2">Start New</li>
                 <li className="info col-md-6">Click a crew member to begin!</li>
-                <li className="score col-md-4">Score: 0 | Top Score: 0</li>    
+                <li className="score col-md-4">Score: {props.score} | Top Score: {props.record}</li>    
             </ul>
         </div>
   

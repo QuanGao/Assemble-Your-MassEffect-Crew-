@@ -12,31 +12,30 @@ import './App.css';
 
 class App extends Component {
     state = {
-        members: members,
-        correctGuess: []
+        members: members
     };
-
-    // record = 0;
-
+    correctGuess = [];
+    record = 0;
+    score = 0;
+    shuffleArr = arr => arr.sort((a,b)=>{return Math.round(Math.random())===0? -1:1 });
     guess = id => {
-        if(this.state.correctGuess.indexOf(id)===-1){
-            this.setState({
-                correctGuess: this.state.correctGuess.concat(id),
-                members: this.state.members.sort((a,b)=>{return Math.round(Math.random())===0? -1:1 })
-            })
+        if(this.correctGuess.indexOf(id)===-1){
+            this.score++;
+            this.record = Math.max(this.record, this.score);
+            this.correctGuess.push(id)
         }else{
-            this.setState({
-                correctGuess: [],
-                // record: Math.max(this.state.record, this.state.correctGuess.length),
-                members: this.state.members.sort((a,b)=>{return Math.round(Math.random())===0? -1:1 }),
-            })
+            this.score = 0;
+            this.correctGuess = [];
         }
+        this.setState({
+            members: this.shuffleArr(this.state.members)
+        })
     };
 
     render() {
         return (
             <Wrapper>
-                <Navbar />
+                <Navbar score={this.score} record={this.record}/>
                 <Playzone>            
                     {this.state.members.map(member=>(<ClickItem guess={this.guess} image={member.image} id={member.id} />))}                
                 </Playzone>
@@ -46,5 +45,4 @@ class App extends Component {
 }
 
 
-// var randomSorted = arr.sort((a,b)=>{return Math.round(Math.random())==0? -1:1 })
 export default App;
