@@ -7,7 +7,6 @@ const listStyle = {
 }
 
 class Navbar extends Component {
-
     render(){
         return (
             <div className="container-fluid scoreboard">
@@ -20,18 +19,4 @@ class Navbar extends Component {
         )
     }
 }
-// const Navbar = (props) => {
-//     return (
-//         <div className="container-fluid scoreboard">
-//             <ul style={listStyle} className="row">
-//                 <li className="restart col-md-2">Start New</li>
-//                 <li className="message col-md-6" style={
-                
-//                     }>{props.message}</li>
-//                 <li className="score col-md-4">Score: {props.score} | Top Score: {props.record}</li>    
-//             </ul>
-//         </div>
-  
-//   )
-// }
 export default Navbar;
