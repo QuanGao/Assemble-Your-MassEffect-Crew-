@@ -15,4 +15,6 @@
     color: white;
     text-align: center;
 }
-
+.restart:hover{
+    cursor:pointer;
+}

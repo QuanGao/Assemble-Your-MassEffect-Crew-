@@ -12,28 +12,32 @@ import './App.css';
 
 class App extends Component {
     state = {
-        members: members
+        members: members,
+        messageColor: ""
     };
     correctGuess = [];
     record = 0;
     score = 0;
 
-    correctState = 0;
+    ;
 
     message = "Click a crew member to begin!";
     shuffleArr = arr => arr.sort((a,b)=>{return Math.round(Math.random())===0? -1:1 });
     guess = id => {
         if(this.correctGuess.indexOf(id)===-1){
 
-            this.correctState = 1;
+     
+            this.setState({messageColor:"#3bff65"})
+            setTimeout(()=>this.setState({messageColor:""}),500)
 
             this.score++;
             this.record = Math.max(this.record, this.score);
             this.correctGuess.push(id);
             this.message = "You guessed correctly!"
         }else{
-
-            this.correctState = -1;
+            
+            this.setState({messageColor:"#f44336"})
+            setTimeout(()=>this.setState({messageColor:""}),500)
 
             this.score = 0;
             this.correctGuess = [];
@@ -43,12 +47,20 @@ class App extends Component {
             members: this.shuffleArr(this.state.members)
         })
     };
+    reset = ()=>{
+        this.score = 0;
+        this.record = 0;
+        this.correctGuess = [];
+        this.setState({
+            members: this.shuffleArr(this.state.members)
+        })
 
+    }
     render() {
         return (
             <Wrapper>
                 
-                <Navbar correctState={this.correctState} score={this.score} record={this.record} message={this.message}/>
+                <Navbar reset={this.reset} messageColor={this.state.messageColor} score={this.score} record={this.record} message={this.message}/>
 
                 <Playzone>            
                     {this.state.members.map(member=>(<ClickItem key={member.name} guess={this.guess} image={member.image} id={member.id} />))}                
