@@ -2,7 +2,11 @@
     background-color: #2193d7;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 1.3em;
-    opacity: 0.9;
+    opacity: 1;
+
+    position:fixed;
+    top:0px;
+    z-index:1;
 };
 
 .scoreboard ul {
@@ -19,3 +23,15 @@
 .restart:hover{
     cursor:pointer;
 }
+
+@media screen and (max-width: 1020px) {
+    .scoreboard {
+        font-size:1em;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    .scoreboard {
+        font-size: 1.2em;
+    }
+  }
