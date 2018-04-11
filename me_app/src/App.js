@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import Wrapper from "./components/Wrapper"
 import ClickItem from "./components/ClickItem";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
@@ -16,13 +15,14 @@ class App extends Component {
     score = 0;
     message = "Click a crew member to begin!";
     level = 1;
+    
     shuffleArr = arr => arr.sort((a,b)=>{return Math.round(Math.random())===0? -1:1 });
+
     guess = id => {
         if(this.correctGuess.indexOf(id)===-1){
 
             this.setState({messageColor:"#3bff65"})
             setTimeout(()=>this.setState({messageColor:""}),500)
-
             this.score++;
             this.record = Math.max(this.record, this.score);
             this.correctGuess.push(id);
@@ -36,10 +36,10 @@ class App extends Component {
                 this.score = 0;
                 this.correctGuess = [];
                 this.level++;
+                this.message = `You've won lvl 1! Now lvl ${this.level}`
                 this.setState({
                     members: members.slice(0,8)
                 })
-                this.message = `You've won lvl 1! Now lvl ${this.level}`
             }else if(this.level===2){
                 this.score = 0;
                 this.correctGuess = [];
@@ -51,9 +51,7 @@ class App extends Component {
             }else{
                 this.message = "You've beat all the levels!"
             }
-
-        }else{
-            
+        }else{          
             this.setState({messageColor:"#f44336"})
             setTimeout(()=>this.setState({messageColor:""}),500)
             this.score = 0;
@@ -64,6 +62,7 @@ class App extends Component {
             })
         }
     };
+
     reset = ()=>{
         this.level = 1;
         this.score = 0;
@@ -87,6 +86,5 @@ class App extends Component {
         )
     }
 }
-
 
 export default App;
