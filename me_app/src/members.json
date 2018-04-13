@@ -1,0 +1,61 @@
+[{
+        "id": 1,
+        "name": "Grunt",
+        "image": "./images/Grunt.png"
+    },
+    {
+        "id": 2,
+        "name": "Garrus",
+        "image": "./images/Garrus.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Jack",
+        "image": "./images/Jack.png"
+    },
+    {
+        "id": 4,
+        "name": "Joker",
+        "image": "./images/Joker.png"
+    },
+    {
+        "id": 5,
+        "name": "Miranda",
+        "image": "./images/Miranda.png"
+    },
+    {
+        "id": 6,
+        "name": "Mordin",
+        "image": "./images/Mordin.png"
+    },
+    {
+        "id": 7,
+        "name": "Tali",
+        "image": "./images/Tali.png"
+    },
+    {
+        "id": 8,
+        "name": "Thane",
+        "image": "./images/Thane.png"
+    },
+    {
+        "id": 9,
+        "name": "Samara",
+        "image": "./images/Samara.png"
+    },
+    {
+        "id": 10,
+        "name": "Illusive_man",
+        "image": "./images/Illusive_man.jpg"
+    },
+    {
+        "id": 11,
+        "name": "EDI",
+        "image": "./images/EDI.png"
+    },
+    {
+        "id": 12,
+        "name": "Wrex",
+        "image": "./images/Wrex.png"
+    }
+]
