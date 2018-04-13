@@ -1,0 +1,36 @@
+.scoreboard {
+    background-color: #2193d7;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.3em;
+    opacity: 1;
+
+    position:fixed;
+    top:0px;
+    z-index:1;
+};
+
+.scoreboard ul {
+    list-style-type: none;
+    display: block;
+    width: 100%;
+}
+.scoreboard li {
+    display: inline-block;
+    color: white;
+    text-align: center;
+}
+.restart:hover{
+    cursor:pointer;
+}
+
+@media screen and (max-width: 1020px) {
+    .scoreboard {
+        font-size:1em;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    .scoreboard {
+        font-size: 1.2em;
+    }
+  }
