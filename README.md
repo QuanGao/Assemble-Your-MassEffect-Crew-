@@ -1,4 +1,4 @@
-# [MassEffect_CrewAssembly](/)
+# [MassEffect_CrewAssembly](https://mass-effect-homework.herokuapp.com/)
 
 #### A memory game built with react
 
@@ -13,4 +13,4 @@
 <img src="./pics/lvl2.png" alt="scrapePic" width="800"/>;
 
 ###### Wanna know which new members are gonna appear in the final level?
-###### [Accept the challenge and find out for yourself](/)
+###### [Accept the challenge and find out for yourself](https://mass-effect-homework.herokuapp.com/)
